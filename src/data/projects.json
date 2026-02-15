@@ -1,0 +1,101 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "AI Resume Analyzer",
+      "category": "FullStack",
+      "cardBlurb": "AI-powered resume reviewer that scores resumes, extracts skills, and returns actionable improvements in seconds.",
+      "summary": "A client-first resume analysis tool that parses uploaded CVs, extracts structured data (skills, experience, education), and uses LLM-based scoring and recommendations to optimize resumes for job descriptions. Built as a single-page app with persistent storage, user auth, and on-demand AI processing.",
+      "longDescription": "Built to automate and improve resume feedback for early-career engineers and students. Users upload a resume (PDF/DOCX), the app extracts text, maps skills/roles to standardized tags, compares against target job descriptions, and generates an explainable score with prioritized suggestions (format, keywords, achievements, ATS-friendliness). The UI focuses on fast feedback and clear, actionable edits a candidate can apply immediately.",
+      "technologies": ["React", "TypeScript", "Puter.js", "Zustand", "Node.js", "Vercel"],
+      "liveUrl": "https://resumind-beta-smoky.vercel.app",
+      "repoUrl": "https://github.com/Munir-Rahman/Resumind",
+      "image": "/ai_resume.webp",
+      "featured": true,
+      "role": "Sole developer — frontend + backend integration, AI prompt design, storage and CI/CD.",
+      "keyFeatures": [
+        "Resume upload (PDF/DOCX) with client-side processing fallback",
+        "Skill & experience extraction and normalization",
+        "LLM-driven scoring and line-by-line improvement suggestions",
+        "Compare resume vs. job description — gap analysis",
+        "User accounts and persistent resume history"
+      ],
+      "impact": {
+        "users": "replace_with_actual_number",
+        "avgAnalysisTime": "replace_with_seconds",
+        "improvementRate": "replace_with_% (e.g., % of users who accepted suggestions)"
+      },
+      "notableChallengesAndSolutions": [
+        "Accurate extraction from varied PDF formats — solved with hybrid client-side parsing + server sanitization.",
+        "Keeping prompts deterministic — built standardized templates and few-shot examples; implemented temperature control and result validation.",
+        "Privacy / credentials — used Puter.js to avoid exposing API keys and store minimal PII client-side where possible."
+      ],
+      "readmeChecklist": [
+        "Project overview + one-line pitch",
+        "Live demo link and screenshots / short GIF",
+        "Architecture diagram (frontend, Puter.js, storage)",
+        "How to run locally (env, scripts)",
+        "Key design decisions and prompt examples",
+        "License and contribution guidance"
+      ],
+      "demoTalkingPoints": [
+        "Show a resume upload → instant extraction → highlight key suggestions",
+        "Explain prompt template and how the model maps skills to job requirements",
+        "Describe tradeoffs: latency vs accuracy, and privacy choices"
+      ],
+      "nextSteps": [
+        "Add A/B testing for suggestion templates and measure acceptance",
+        "Export actionable checklist PDF for users",
+        "Add role-specific templates (backend, frontend, data) and ATS score"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "EMT Chat — Real-time Team Chat",
+      "category": "FullStack",
+      "cardBlurb": "Real-time group & direct messaging with file uploads, presence, and admin dashboard — built for small teams and learning communities.",
+      "summary": "A modern chat application with real-time messaging, typing indicators, file/image uploads, message search, and an admin dashboard for moderating channels and users. The app emphasizes responsiveness, accessible UI, and simple deployment.",
+      "longDescription": "Designed as a production-capable chat demo: sockets power instant messages and presence; a REST API handles file uploads and search indexing; the admin panel provides message moderation, user management, and analytics. Security features like rate-limiting and bot protection are integrated, plus reliable media handling via Cloudinary.",
+      "technologies": ["React", "Tailwind CSS", "DaisyUI", "JavaScript", "Node.js", "Express", "Socket.io", "MongoDB", "Cloudinary", "Resend", "Arcjet", "Git & GitHub"],
+      "liveUrl": "https://emt-chat-application.onrender.com",
+      "repoUrl": "https://github.com/Munir-Rahman/EMT-Chat-Application",
+      "image": "/emt_chat.png",
+      "featured": true,
+      "role": "Full-stack implementation: realtime backend, message persistence, file storage integration, and responsive frontend.",
+      "keyFeatures": [
+        "Real-time messaging with Socket.io (rooms & DMs)",
+        "File/image uploads using Cloudinary and secure URLs",
+        "Email notifications via Resend",
+        "Admin dashboard: user/channel moderation and analytics",
+        "Basic security: rate-limits and bot protection (Arcjet)"
+      ],
+      "impact": {
+        "concurrentUsersTested": "replace_with_number",
+        "avgMessageLatencyMs": "replace_with_ms",
+        "uptime": "replace_with_%"
+      },
+      "notableChallengesAndSolutions": [
+        "Scaling realtime events — used efficient room partitioning and lightweight message payloads.",
+        "Preventing spam/uploads abuse — integrated Arcjet for bot detection and server-side validation.",
+        "Handling large file uploads — implemented server-side streaming and Cloudinary transforms to optimize delivery."
+      ],
+      "readmeChecklist": [
+        "Run instructions with environment variables",
+        "Socket.io event list and payload examples",
+        "Admin credentials for demo",
+        "Deployment notes for Render and production tips",
+        "Security checklist (Arcjet setup, CORS, rate-limits)"
+      ],
+      "demoTalkingPoints": [
+        "Show live multi-user chat and presence indicators",
+        "Demonstrate file upload, email notification, and moderation flow",
+        "Explain how Arcjet protects endpoints and how you tested abuse scenarios"
+      ],
+      "nextSteps": [
+        "Add end-to-end encryption option for private channels",
+        "Message search with fuzzy matching and attachments indexing",
+        "Mobile app wrapper or PWA for offline support"
+      ]
+    }
+  ]
+}
